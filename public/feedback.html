@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Give Feedback — Event Feedback Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">Event Feedback Hub</p>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="feedback.html" class="active">Give Feedback</a>
+      <a href="view-feedback.html">View Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Share your feedback</h1>
+    <p class="lead">Fields marked with * are required.</p>
+
+    <form id="feedbackForm">
+      <label>
+        Event *
+        <select id="event_name" required>
+          <option value="">Select an event</option>
+          <option>Campus Tech Talk: Building with AI</option>
+          <option>Full Stack Bootcamp Demo Day</option>
+          <option>Career Fair: Tech &amp; Product Roles</option>
+          <option>Hackathon Kickoff Night</option>
+        </select>
+      </label>
+
+      <label>
+        Your name *
+        <input type="text" id="attendee_name" required />
+      </label>
+
+      <label>
+        Rating (1&ndash;5) *
+        <select id="rating" required>
+          <option value="">Select a rating</option>
+          <option value="5">5 &mdash; Excellent</option>
+          <option value="4">4 &mdash; Good</option>
+          <option value="3">3 &mdash; Average</option>
+          <option value="2">2 &mdash; Below average</option>
+          <option value="1">1 &mdash; Poor</option>
+        </select>
+      </label>
+
+      <label>
+        Comments
+        <textarea id="comments" placeholder="What stood out, and what could be better?"></textarea>
+      </label>
+
+      <button type="submit">Submit feedback</button>
+      <p id="statusMsg" class="status-msg"></p>
+    </form>
+  </main>
+
+  <footer>Event Feedback Hub &mdash; internship project</footer>
+  <script src="script.js"></script>
+</body>
+</html>
